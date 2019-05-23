@@ -1,0 +1,19 @@
+// Linked List
+// Insert_front O(1)
+// delete_front O(1)
+// Insert_back O(n) or O(1)
+// delete_back O(n) or O(1) //as if it's single linked list we need to traverse the whole list 
+// Access any element --> O(n)//as we go to first place ask about second place then go to second place ask about third place and so on till we reach element
+
+// vs Arrays or Vectors
+// Insert_front O(n)
+// delete_front O(n)
+// Insert_back O(n) or O(1)//if size exceeded make a bigger array and copy elements then insert element so O(n)
+// delete_back O(n) or O(1)
+// Access any element --> O(1) 
+
+so list is good when you don't know size at beginning and array is good if we know
+
+for better visualization visit:https://visualgo.net/
+
+//new create element in heap and return the address of element so we store in pointer

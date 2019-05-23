@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1558554791 source:c:\users\user\desktop\data structure cse\sheets and solutions\sheet 6\q2\main.cpp
+	<bits/stdc++.h>
+	<iostream>
+	<vector>
+	<list>
+	<cmath>
+

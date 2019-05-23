@@ -1,0 +1,4 @@
+stack is wrapper around list : implementing LIFO
+
+linked list push and pop from front or push and pop from end if double linked list
+push and pop from front if single linked list

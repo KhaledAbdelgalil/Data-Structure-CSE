@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1556822598 source:c:\users\user\desktop\data structure cse\stack\maximum element problem hackerrank\max_element_pb\main.cpp
+	<iostream>
+	<stack>
+	<algorithm>
+

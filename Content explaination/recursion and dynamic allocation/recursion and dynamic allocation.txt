@@ -1,0 +1,59 @@
+You have function can be calculated from itself but simpler
+recursion solution of problem by solving same sub-problems
+for example:fact(n)=n*fact(n-1).
+you need base condition in order not to have stack-overflow
+use this website to visualize:http://www.pythontutor.com/
+use this code and see visualization of recursion with stack:
+#include<iostream>
+using namespace std;
+	
+double factorial(int n){	 
+                   if(n<=1) return 1;
+	  int temp=n*factorial(n-1);
+	  return temp;
+	}
+	
+int main(){  
+	cout<<factorial(5); 
+	return 0; 
+    }
+---------------------------------------------------
+use also this example in visulazation:
+#include<iostream>
+using namespace std;
+
+
+//base case array contains 1 element so sum is that element i.e arr[0]
+//general rule sum=arr[0]+sum of rest of array i,e arr[0]+sum(arr+1,n-1); sum(arr[0:end])=arr[0]+sum(arr[1:end]);
+int sum_rec(int arr[],int n)
+{
+    if(n==1) return arr[0];
+
+    int part1=arr[0];
+    int part2=sum_rec(arr+1,n-1);
+    return part1+part2;
+}
+int main(){
+    int n=7;
+    
+    int arr[]={0,1,2,3,4,5,6};
+    cout<<sum_rec(arr,n);
+    return 0;
+    }
+---------------------------------------------------
+//dynamic allocation
+new make variables in heap.
+local variables in scope are stored in stack
+
+if  you make
+int* create()// c is stored in stack but block stored in heap and we return copy of c pointer to block c after fn will be removed but block not
+{
+     int* c=new int(10);
+     c[0]=0;
+     return c;
+}
+
+for every new we must have a delete
+-----------------------------------------
+for 2d allocation if we define pointer to array of pointers then define array of pointers then for every pointer we define array of int when 
+deleting:delete array of int for every pointer then delete pointer to array of pointers use visualazation to well understand it.

@@ -1,0 +1,21 @@
+a) T(n)= 1 when n=0
+               T(n-1)+n  when n>1
+T(n)=T(n-1)+n=T(n-2)+n-1+n=T(n-k)+summation(n-m) from m=0 till k-1
+T(n)=T(n-n)+summation(n-m) from m=0 till n-1=1+n(n+1)/2=O(n2) 
+
+b) T(n)=1 when n=1 and T(n/2)+O(n) when n>1
+     T(n)=T(n/2)+O(n)=T(n/4)+2O(n)=T(n/2^k)+kO(n) when k=logn then T(n)=T(1) +nlogn T(1)=1
+i.e O(nlogn)
+c)T(n) =1 when n=1 and T(n)=T(n/2)+1 when n>1
+T(n) = T(n/2)+1=T(n/4)+1+1=T(n/2^k)+k*1 when k=logn i.e T(n)=1+logn i.e O(logn)
+
+d)T(n)=2T(n/2)+O(n)=4T(n/4)+O(n)+O(n)=2^k*T(n/2^k)+k*O(n)=logn+nlogn O(nlogn)
+k=logn
+
+e)T(n)=1 when n=0 and 3T(n-1)+n n>0
+T(n)=3T(n-1)+n=3(3T(n-2)+n-1)+n=9T(n-2)+3(n-1)+n=9(3T(n-3)+n-2)+3(n-1)+n
+=3^3T(n-3)+9(n-2)+3(n-1)+n
+=3^nT(n-n)+3^(n-1)+2*3^(n-2)+...........3(n-1)+n
+i.e O(3^n)
+
+master theorem : for recurence relations T(n)=a*T(n/b)+n^d

@@ -1,0 +1,67 @@
+logn<sqrt(n)<n<nlogn<n2<2^n
+assume basic operations is done in same amount of time
+1-for(int i=0;i<n;i++)
+cout<<i;
+
+int i=0 done 1 time
+i<n  n+1 times
+i++   n times
+cout  n times
+T(n) =(3n+2)*time of operation
+i.e O(n)
+
+2-for (int i = 1; i <n ; i *= 2)
+cout<i;
+
+int i=1 done 1 time
+i<n  logn +1 times
+i++   logn times
+cout  logn times
+
+explanation: 1-2-4-8-16------p where p<n but 2p>n
+2^0-2^1-2^2-2^3-2^4-2^5-2^6-----2^k  i.e 2^(k+1)>n so it will enter for loop till k=logn
+T(n)=3logn +2;
+i.e O(logn)
+
+3-for (int i = 0; i <n; i++)
+
+f(n); // where f(n) has O(log n)
+
+int i=0 done 1 time
+i<n  n+1 times
+i++   n times
+f(n) n times
+T(n)=1+n+1+n+n*logn=2+2n+nlogn
+i.e O(nlogn);
+
+4-void decimal2binary (int n)
+{ if(n<0)
+{decimal2binary(n/2); cout<<n%2; }
+}
+using recurance relation:
+T(n)=1+1+T(n/2)
+using subsitution methon:
+T(n)=2+T(n/2)=2+2+T(n/4)=2+2+2+T(n/8) since 8=2^3
+i.e T(n)=2*k+T(n/2^k) 
+to get T(0) when 2^k>n when k=1+logn 
+i.e T(n)=2*(1+logn)+T(0) T(0) ->first computation
+so T(n)=2+2*logn
+i.e O(logn).
+
+
+complexity is measured with input size.
+
+
+
+
+
+
+
+5-example:for(i=1;i<=n*n;i++)
+	     for(j=1;j<=i;j++)
+	           cout<<i;
+T(n)=1+2+3+4+5+......+n2=n2(n2+1)/2
+i.e O(n4)
+
+uses math series in bringing complexity
+3^n >n^30

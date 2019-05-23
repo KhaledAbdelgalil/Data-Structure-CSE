@@ -1,0 +1,12 @@
+//we do hashing for make 1-insert/2-delete/3-acess/4-search of elements about O(1)
+//also if we have 3 objects obj1(ID=1206/name=khaled) obj2(ID=2205 ,name=eslam),obj3(ID=2535,Name=salma)
+we want to store these 3 elements what can we do?
+we can reserve an array of size more than biggest ID but this is bad as memory is wasted
+so we go to concept of hashing we can say that last digit is the index of array we reserve 10 elments array
+so there is a conflict between ID=2205 and ID=2535
+
+solution 1-Replacement:delete last element and store new element
+             2-open addresing(closed hashing):linear probing/quadratic probing(index + i^2)%10 
+		if collison comes apply hashfn2;
+            3-open hashing::with chaining of ocurse we have fixed size of array but each array is a list
+		each index in array is called bucket
