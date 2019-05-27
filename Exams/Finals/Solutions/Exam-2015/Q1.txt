@@ -1,0 +1,14 @@
+a-false
+b-true
+c-false:at max 2 children may not
+d-false:o(logd) as average case o(d) as worstCase
+e-false :children less than parents//or in BST 
+f-false:finding adjacent vertices
+g-false:when root changes structure changes
+h-true left itself right
+i-O(1) if maxHeap
+j-false
+k-false faster
+l-O(logn)
+m-true post order delete children then parent
+n-true:insert O(logn)

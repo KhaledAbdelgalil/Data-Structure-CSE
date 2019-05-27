@@ -236,6 +236,19 @@ int Q5_Get_nth_element_from_end(node* root,int n)
     }
     return following_ptr->get_value();
 }
+int Q5_another_solution(node* root,int n)
+{
+    node* ptr=root;
+    vector<int>v;
+    int size=0;
+    while(ptr!=NULL)
+    {
+        v.push_back(ptr->get_value());
+        ptr=ptr->get_next();
+        size++;
+    }
+    return v[size-n];
+}
 int Q6_get_middle(node* root)
 {
     node* fast_ptr=root;
@@ -246,6 +259,19 @@ int Q6_get_middle(node* root)
         fast_ptr=fast_ptr->get_next()->get_next();
     }
     return slow_ptr->get_value();
+}
+int Q6_another_solution(node* root)
+{
+     node* ptr=root;
+    vector<int>v;
+    int size=0;
+    while(ptr!=NULL)
+    {
+        v.push_back(ptr->get_value());
+        ptr=ptr->get_next();
+        size++;
+    }
+    return v[size/2];
 }
 /*------Testing_functions------*/
 void test_print_reverse()
@@ -309,7 +335,7 @@ void test_get_nth_from_end()
 		l.push_back(10 - i);
 	}
 	l.print_list();
-	cout << "the 5th element from the end is " << Q5_Get_nth_element_from_end(l.getRoot(), 5)<<endl;
+	cout << "the 5th element from the end is " << Q5_another_solution(l.getRoot(), 5)<<endl;
 	cout << "5 should be printed"<<endl;
 }
 void test_get_middle_element()
@@ -320,7 +346,7 @@ void test_get_middle_element()
 		l.push_back(10 - i);
 	}
 	l.print_list();
-	cout << "Middle Element -> " << Q6_get_middle(l.getRoot()) << endl;
+	cout << "Middle Element -> " << Q6_another_solution(l.getRoot()) << endl;
 	cout << "Should be 5" << endl;
 	linked_list m;
 	for (size_t i = 0; i < 11; i++)
@@ -328,7 +354,7 @@ void test_get_middle_element()
 		m.push_back(11 - i);
 	}
 	m.print_list();
-	cout << "Middle Element -> " << Q6_get_middle(m.getRoot()) << endl;
+	cout << "Middle Element -> " << Q6_another_solution(m.getRoot()) << endl;
 	cout << "Should be 6" << endl;
 }
 int main()

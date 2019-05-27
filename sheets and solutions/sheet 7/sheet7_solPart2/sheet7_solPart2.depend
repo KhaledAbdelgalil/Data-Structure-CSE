@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1558707289 source:c:\users\user\desktop\data structure cse\data-structure-cse\sheets and solutions\sheet 7\sheet7_solpart2\main.cpp
+	<iostream>
+	<vector>
+	<list>
+	<queue>
+

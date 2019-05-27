@@ -1,0 +1,11 @@
+a)true as parent is greater than children so it's maxHeap
+b)Note:depth of a node is number of edges from this node till root but height of tree is the max depth
+false it's range from 2^n till 2^(n+1)-1
+c)true:O(logn) as distance from any root to any leaf on average is logn
+d)true: as it's better in case of non balanced tree.
+e)false as selection sort is bigO(n^2) while merge sort is bigO(nlogn)
+f)True: as heapSort doesn't require any extraSpace it also takes advantage of mergeSort in O(nlogn) in time and advangte of insertion sort in space:doesn't need extra space
+g)true no. of swaps has order(n^2) selection they are just n
+h)true:to satisfy heap property
+i)false O(n) as we traverese till previous of last element in case of single linked list
+j) false not always true as we it may be parent to left child and doesn't have a right child

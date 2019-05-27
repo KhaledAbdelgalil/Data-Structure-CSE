@@ -1,0 +1,13 @@
+a-O(n)
+b-O(1)
+c-inorder
+d-11,18,42
+e-rightMost
+f-56
+g-3
+h-key should be more than offset so some values couldn't be hashed
+i-1,balanced
+j-connected,directed
+
+
+
